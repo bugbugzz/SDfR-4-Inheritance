@@ -11,7 +11,7 @@
 
 
 #include <string>
-
+// The Package class represents a basic package with sender and receiver information, weight, and a method to calculate shipping costs. It is designed to be a base class for more specific types of packages.
 class Package
 {
 protected: // "protected" lets subclasses see these, but keeps them private from the outside
@@ -20,7 +20,8 @@ protected: // "protected" lets subclasses see these, but keeps them private from
     std::string receiverName;
     std::string receiverAddress;
     double weight;
-public:
+
+    public:
     Package(std::string sName, std::string sAddr, std::string rName, std::string rAddr, double w);
     
     // The "virtual" keyword is the secret sauce for polymorphism!

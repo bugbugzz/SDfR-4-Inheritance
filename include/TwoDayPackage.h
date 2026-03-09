@@ -11,15 +11,17 @@
 #include "Package.h"
 
 class TwoDayPackage : public Package {
+// Define the flat fee and price per kilogram as static constants for two-day shipping
 private:
     static constexpr double flatFee = 5.0; 
     static constexpr double pricePerKg = 2.50;
 
+// The constructor initializes the TwoDayPackage with sender and receiver details, weight, and optional fees. It calls the base class constructor to initialize the common attributes.    
 public:
     TwoDayPackage(std::string sName, std::string sAddr, 
                   std::string rName, std::string rAddr, double w);
 
-    double calculateCosts() const override;
+    double calculateCosts() const override; // override the calculateCosts method to include the flat fee and price per kilogram for two-day shipping
 };
 
 #endif
