@@ -1,8 +1,8 @@
 Compile:g++ -Iinclude -c src/main.cpp -o main.o
 
-Build:g++ main.o -o assignment3.exe          
+Build:g++ main.o -o assignment4.exe          
 
-Run:./assignment3
+Run:./assignment4
 
 
 test
