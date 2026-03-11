@@ -13,8 +13,16 @@
 
 //this function takes a list of Package pointers and prints the cost for each package
 void printCosts(const std::vector<Package*>& packageList) {
-    for (Package* p : packageList) {
+ if (!packageList.empty()) //Check if list is empty
+    {
+        std::cout << "\nCost:" << std::endl;
+        for (Package* p : packageList) {
         std::cout << "Shipping for " << p->calculateCosts() << " Euro" << std::endl;
+        }
+    }
+    else
+    {
+        std::cout << "No packages!" << std::endl;
     }
 }
 
