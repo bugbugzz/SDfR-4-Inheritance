@@ -24,10 +24,10 @@ protected: // "protected" lets subclasses see these, but keeps them private from
     public:
     Package(std::string sName, std::string sAddr, std::string rName, std::string rAddr, double w);
     
-    // The "virtual" keyword is the secret sauce for polymorphism!
+    // The calculateCosts method is declared as virtual, allowing derived classes to provide their own implementation for calculating shipping costs based on their specific rules.
     virtual double calculateCosts() const; 
     
-    virtual ~Package() {} // Always include a virtual destructor for base classes
+    virtual ~Package() {} // virtual destructor to ensure proper cleanup of derived class objects when deleted through a base class pointer
 };
 
 #endif // PACKAGE_H
