@@ -19,8 +19,8 @@ private:
 
 // The constructor initializes the OvernightPackage with sender and receiver details, weight, and optional fees. It calls the base class constructor to initialize the common attributes.
 public:
-    OvernightPackage(std::string sName, std::string sAddr, 
-                     std::string rName, std::string rAddr, double w);
+    OvernightPackage(std::string senderName, std::string senderAddress,
+                     std::string receiverName, std::string receiverAddress, double weight);
 
     double calculateCosts() const override; // override the calculateCosts method to include the flat fee, price per kilogram, and the additional overnight fee based on weight squared;
 };

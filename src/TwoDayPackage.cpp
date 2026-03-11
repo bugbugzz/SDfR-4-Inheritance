@@ -9,8 +9,8 @@
 #include "TwoDayPackage.h"
 
 // Constructor that initializes the TwoDayPackage with sender and receiver details, weight, and optional fees
-TwoDayPackage::TwoDayPackage(std::string sName, std::string sAddr, std::string rName, std::string rAddr, double w)
-    : Package(sName, sAddr, rName, rAddr, w) {}
+TwoDayPackage::TwoDayPackage(std::string senderName, std::string senderAddress, std::string receiverName, std::string receiverAddress, double weight)
+    : Package(senderName, senderAddress, receiverName, receiverAddress, weight) {}
 
 // Override the calculateCosts method to include the flat fee and price per kilogram for two-day shipping    
 double TwoDayPackage::calculateCosts() const {

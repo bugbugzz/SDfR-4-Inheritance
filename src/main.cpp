@@ -13,11 +13,10 @@
 
 //this function takes a list of Package pointers and prints the cost for each package
 void printCosts(const std::vector<Package*>& packageList) {
-    int count = 1; // Start a counter
+    int packageNumber = 1;
     for (Package* p : packageList) {
-        std::cout << "Package " << count << " - Shipping for " 
-                  << p->calculateCosts() << " Euro" << std::endl;
-        count++; // Increment for the next package
+        std::cout << "Package " << packageNumber << " - Shipping for " << p->calculateCosts() << " Euro" << std::endl;
+        packageNumber++;
     }
 }
 
@@ -25,7 +24,7 @@ int main() {
     // Create a list (vector) of Package pointers
     std::vector<Package*> myPackages;
 
-    // Hard-code a few packages 
+    // Hard coded packages 
     myPackages.push_back(new TwoDayPackage("Milou", "University Campus", "Shatrunjay", "Student Housing", 4.2));
     myPackages.push_back(new OvernightPackage("Milou", "University Campus", "Shatrunjay", "Student Housing", 5.6));
     myPackages.push_back(new OvernightPackage("Milou", "University Campus", "Shatrunjay", "Student Housing", 6.0));

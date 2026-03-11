@@ -18,8 +18,8 @@ private:
 
 // The constructor initializes the TwoDayPackage with sender and receiver details, weight, and optional fees. It calls the base class constructor to initialize the common attributes.    
 public:
-    TwoDayPackage(std::string sName, std::string sAddr, 
-                  std::string rName, std::string rAddr, double w);
+    TwoDayPackage(std::string senderName, std::string senderAddress,
+                  std::string receiverName, std::string receiverAddress, double weight);
 
     double calculateCosts() const override; // override the calculateCosts method to include the flat fee and price per kilogram for two-day shipping
 };
