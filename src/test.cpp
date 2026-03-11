@@ -54,7 +54,7 @@ void testBasePackage() {
     std::vector<Package*> myPackages;
 
     //Base package type is selected
-    myPackages.push_back(new Package("Alice", "123 Lane", "Bob", "456 Blvd", 5.0));
+    myPackages.push_back(new Package("Milou", "University Campus", "Shatrunjay", "Student Housing", 5.0));
 
     printCosts(myPackages);
 
@@ -72,13 +72,13 @@ void testAddPackages() {
     std::vector<Package*> myPackages;
     
     //Add two packages to list
-    myPackages.push_back(new TwoDayPackage("Alice", "123 Lane", "Bob", "456 Blvd", 5.0));
-    myPackages.push_back(new OvernightPackage("Charlie", "789 St", "Daisy", "321 Rd", 5.0));
+    myPackages.push_back(new TwoDayPackage("milou", "university campus", "Shatrunjay", "student housing", 5.0));
+    myPackages.push_back(new OvernightPackage("milou", "university campus", "Shatrunjay", "student housing", 5.0));
 
     printCosts(myPackages);
 
     //Add third package to list
-    myPackages.push_back(new TwoDayPackage("George", "987 Avenue", "Lisa", "654 Drive", 7.5));
+    myPackages.push_back(new TwoDayPackage("milou", "university campus", "Shatrunjay", "student housing", 7.5));
 
     printCosts(myPackages);
   
