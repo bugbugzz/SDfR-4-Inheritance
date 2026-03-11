@@ -3,12 +3,12 @@
 // Group : 14
 // License : LGPL open source license
 //
-// Brief : this file contains the implementation of the TwoDayPackage class, which represents a two-day package with a flat fee and a price per kilogram.
+// Brief : this file contains the implementation of the TwoDayPackage class.
 //=====================...........................=================================
 
 #include "TwoDayPackage.h"
 
-// Constructor that initializes the TwoDayPackage with sender and receiver details, weight, and optional fees
+// Constructor that initializes the TwoDayPackage with sender and receiver details, weight
 TwoDayPackage::TwoDayPackage(std::string senderName, std::string senderAddress, std::string receiverName, std::string receiverAddress, double weight)
     : Package(senderName, senderAddress, receiverName, receiverAddress, weight) {}
 

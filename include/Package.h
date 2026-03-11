@@ -3,7 +3,7 @@
 // Group : 14ppd
 // License : LGPL open source license
 //
-// Brief : this class represents a Package, which has a sender, receiver, weight, and a method to calculate costs. It serves as the base class for different types of packages like TwoDayPackage and OvernightPackage.
+// Brief : this file contains the definition of the Package class, which is the base class for different types of packages.
 //=====================...........................=================================
 
 #ifndef PACKAGE_H
@@ -13,7 +13,7 @@
 #include <string>
 class Package
 {
-protected: // "protected" lets subclasses see these, but keeps them private from the outside
+protected: // protected lets subclasses see these, but keeps them private from the outside
     std::string senderName;
     std::string senderAddress;
     std::string receiverName;

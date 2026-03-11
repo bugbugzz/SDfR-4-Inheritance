@@ -3,7 +3,7 @@
 // Group : 14
 // License : LGPL open source license
 //
-// Brief : this file contains the implementation of the OvernightPackage class, which represents an overnight package with a flat fee and a price per kilogram.
+// Brief : this file contains the implementation of the OvernightPackage class
 //=====================...........................=================================
 
 #include "OvernightPackage.h"
