@@ -3,7 +3,7 @@
 // Group : 14ppd
 // License : LGPL open source license
 //
-// Brief : this class represents a Package, which has a sender, receiver, weight, and a method to calculate costs. It serves as the base class for different types of packages like TwoDayPackage and OvernightPackage.
+// Brief : this file contains the definition of the Package class, which is the base class for different types of packages.
 //=====================...........................=================================
 
 #ifndef PACKAGE_H
@@ -11,10 +11,9 @@
 
 
 #include <string>
-// The Package class represents a basic package with sender and receiver information, weight, and a method to calculate shipping costs. It is designed to be a base class for more specific types of packages.
 class Package
 {
-protected: // "protected" lets subclasses see these, but keeps them private from the outside
+protected: // protected lets subclasses see these, but keeps them private from the outside
     std::string senderName;
     std::string senderAddress;
     std::string receiverName;
@@ -22,12 +21,12 @@ protected: // "protected" lets subclasses see these, but keeps them private from
     double weight;
 
     public:
-    Package(std::string sName, std::string sAddr, std::string rName, std::string rAddr, double w);
+    Package(std::string senderName, std::string senderAddress, std::string receiverName, std::string receiverAddress, double weight);
     
     // The calculateCosts method is declared as virtual, allowing derived classes to provide their own implementation for calculating shipping costs based on their specific rules.
     virtual double calculateCosts() const; 
-    
-    virtual ~Package() {} // virtual destructor to ensure proper cleanup of derived class objects when deleted through a base class pointer
+    // virtual destructor in the base class ensures that both the derived and base class destructors are called, safely releasing all resources.
+    virtual ~Package(){};
 };
 
 #endif // PACKAGE_H

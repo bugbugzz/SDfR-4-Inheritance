@@ -13,16 +13,10 @@
 
 //this function takes a list of Package pointers and prints the cost for each package
 void printCosts(const std::vector<Package*>& packageList) {
- if (!packageList.empty()) //Check if list is empty
-    {
-        std::cout << "\nCost:" << std::endl;
-        for (Package* p : packageList) {
-        std::cout << "Shipping for " << p->calculateCosts() << " Euro" << std::endl;
-        }
-    }
-    else
-    {
-        std::cout << "No packages!" << std::endl;
+    int packageNumber = 1;
+    for (Package* p : packageList) {
+        std::cout << "Package " << packageNumber << " - Shipping for " << p->calculateCosts() << " Euro" << std::endl;
+        packageNumber++;
     }
 }
 
@@ -30,14 +24,16 @@ int main() {
     // Create a list (vector) of Package pointers
     std::vector<Package*> myPackages;
 
-    // Hard-code a few packages
-    myPackages.push_back(new TwoDayPackage("Alice", "123 Lane", "Bob", "456 Blvd", 5.0));
-    myPackages.push_back(new OvernightPackage("Charlie", "789 St", "Daisy", "321 Rd", 5.0));
+    // Hard coded packages 
+    myPackages.push_back(new TwoDayPackage("Milou", "University Campus", "Shatrunjay", "Student Housing", 4.2));
+    myPackages.push_back(new OvernightPackage("Milou", "University Campus", "Shatrunjay", "Student Housing", 5.6));
+    myPackages.push_back(new OvernightPackage("Milou", "University Campus", "Shatrunjay", "Student Housing", 6.0));
+
 
     // Pass the list to the function
     printCosts(myPackages);
 
-    // Clean up memory
+    // Clean up memory 
     for (Package* p : myPackages) {
         delete p;
     }

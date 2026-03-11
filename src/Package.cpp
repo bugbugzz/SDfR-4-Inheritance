@@ -3,16 +3,17 @@
 // Group : 14
 // License : LGPL open source license
 //
-// Brief : this file contains the implementation of the Package class, which is the base class for different types of packages. It includes a constructor to initialize the package details and a virtual method to calculate costs, which can be overridden by derived classes.
+// Brief : this file contains the implementation of the Package class, which is the base class for different types of packages.
 //=====================...........................=================================
+
 #include "Package.h"
 
-// Constructor that initializes the Package with sender and receiver details, weight, and optional fees
-Package::Package(std::string sName, std::string sAddr, std::string rName, std::string rAddr, double w)
-    : senderName(sName), senderAddress(sAddr), receiverName(rName), receiverAddress(rAddr), weight(w) {}
+// Constructor that initializes the Package with sender and receiver details, weightz
+Package::Package(std::string senderName, std::string senderAddress, std::string receiverName, std::string receiverAddress, double weight)
+    : senderName(senderName), senderAddress(senderAddress), receiverName(receiverName), receiverAddress(receiverAddress), weight(weight) {}
 
- // The base version of calculateCosts just returns 0.0, since we expect derived classes to provide their own implementation
+ // The base version of calculateCosts just returns 0
 double Package::calculateCosts() const {
-    return 0.0;
+    return 0;
 }
 
