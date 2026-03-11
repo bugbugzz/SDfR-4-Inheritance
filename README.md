@@ -12,13 +12,12 @@ g++ Package.o TwoDayPackage.o OvernightPackage.o main.o -o assignment4.exe
 Run:./assignment4
 
 
-test
-compile: 
+test compile: 
 g++ -Iinclude -c src/Package.cpp -o Package.o 
 g++ -Iinclude -c src/TwoDayPackage.cpp -o TwoDayPackage.o
 g++ -Iinclude -c src/OvernightPackage.cpp -o OvernightPackage.o
 
-build: 
+test build: 
 g++ Package.o TwoDayPackage.o OvernightPackage.o test.o -o test.exe 
 
-run: ./test
+test run: ./test
